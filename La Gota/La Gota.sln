@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "La Gota", "La Gota.csproj", "{0DC3D219-81B1-42E2-A5DF-1490EDF5BA79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.Entidades", "..\Biblioteca.Entidades\Biblioteca.Entidades.csproj", "{1AFA71C3-1004-4281-9943-122102024978}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0DC3D219-81B1-42E2-A5DF-1490EDF5BA79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DC3D219-81B1-42E2-A5DF-1490EDF5BA79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DC3D219-81B1-42E2-A5DF-1490EDF5BA79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AFA71C3-1004-4281-9943-122102024978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AFA71C3-1004-4281-9943-122102024978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AFA71C3-1004-4281-9943-122102024978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AFA71C3-1004-4281-9943-122102024978}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
