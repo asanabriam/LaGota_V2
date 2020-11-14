@@ -8,7 +8,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace Datos
+namespace Biblioteca.Datos
 {
     public class Datos
     {
@@ -44,9 +44,5 @@ namespace Datos
             conexionSQL.Close();
             return resultado;
         }
-
-
-
-
     }
 }

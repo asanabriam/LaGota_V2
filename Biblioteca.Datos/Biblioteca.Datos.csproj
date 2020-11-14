@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AAB69066-FBC4-4C73-936D-89E44F0F606D}</ProjectGuid>
+    <ProjectGuid>{899A3360-11DE-4541-A7C9-F1CF217C2F30}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Datos</RootNamespace>
-    <AssemblyName>Datos</AssemblyName>
+    <RootNamespace>Biblioteca.Datos</RootNamespace>
+    <AssemblyName>Biblioteca.Datos</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

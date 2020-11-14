@@ -89,13 +89,13 @@
     <None Include="Resources\cerrar.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Biblioteca.Datos\Biblioteca.Datos.csproj">
+      <Project>{899a3360-11de-4541-a7c9-f1cf217c2f30}</Project>
+      <Name>Biblioteca.Datos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Biblioteca.Entidades\Biblioteca.Entidades.csproj">
       <Project>{1afa71c3-1004-4281-9943-122102024978}</Project>
       <Name>Biblioteca.Entidades</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Datos\Biblioteca.Datos.csproj">
-      <Project>{aab69066-fbc4-4c73-936d-89e44f0f606d}</Project>
-      <Name>Biblioteca.Datos</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
