@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.Entidades
 {
-    public class Funcionarios
+    public class Funcionarios : Persona
     {
-        public string IDENTIFICACION { set; get; }
-        public string NOMBRE { set; get; }
-        public string APELLIDO1 { set; get; }
-        public string APELLIDO2 { set; get; }
 
     }
 }

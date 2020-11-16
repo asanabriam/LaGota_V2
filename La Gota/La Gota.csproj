@@ -51,16 +51,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmMuestraHidrometros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMuestraHidrometros.Designer.cs">
+      <DependentUpon>FrmMuestraHidrometros.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMuestraCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMuestraCategorias.Designer.cs">
+      <DependentUpon>FrmMuestraCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMuestraClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMuestraClientes.Designer.cs">
+      <DependentUpon>FrmMuestraClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMuestraFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMuestraFuncionarios.Designer.cs">
+      <DependentUpon>FrmMuestraFuncionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMuestraCategorias.resx">
+      <DependentUpon>FrmMuestraCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMuestraClientes.resx">
+      <DependentUpon>FrmMuestraClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMuestraFuncionarios.resx">
+      <DependentUpon>FrmMuestraFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMuestraHidrometros.resx">
+      <DependentUpon>FrmMuestraHidrometros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -97,6 +133,19 @@
       <Project>{1afa71c3-1004-4281-9943-122102024978}</Project>
       <Name>Biblioteca.Entidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\configuraciones.png" />
+    <Content Include="Resources\drop.png" />
+    <Content Include="Resources\house.png" />
+    <Content Include="Resources\informacion.png" />
+    <Content Include="Resources\LOGO.png" />
+    <Content Include="Resources\man %283%29.png" />
+    <Content Include="Resources\man.png" />
+    <Content Include="Resources\maximizar.png" />
+    <Content Include="Resources\minimizar.png" />
+    <Content Include="Resources\minimizar2.png" />
+    <Content Include="Resources\report.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

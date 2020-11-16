@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categorias.cs" />
+    <Compile Include="Persona.cs" />
     <Compile Include="HistorialConsumo.cs" />
     <Compile Include="Hidrometros.cs" />
     <Compile Include="Funcionarios.cs" />
