@@ -474,7 +474,7 @@
             this.btnRegCategoria.DisabledColor = System.Drawing.Color.Gray;
             this.btnRegCategoria.Font = new System.Drawing.Font("Unispace", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegCategoria.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnRegCategoria.Iconimage = global::La_Gota.Properties.Resources.house;
+            this.btnRegCategoria.Iconimage = global::La_Gota.Properties.Resources.house1;
             this.btnRegCategoria.Iconimage_right = null;
             this.btnRegCategoria.Iconimage_right_Selected = null;
             this.btnRegCategoria.Iconimage_Selected = null;

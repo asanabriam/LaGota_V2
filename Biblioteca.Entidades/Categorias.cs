@@ -11,5 +11,11 @@ namespace Biblioteca.Entidades
         public string CODCATEGORIA { set; get; }
         public string DESCRIPCION { set; get; }
 
+  
+        public override string ToString()
+        {
+            return DESCRIPCION;
+        }
+    
     }
 }

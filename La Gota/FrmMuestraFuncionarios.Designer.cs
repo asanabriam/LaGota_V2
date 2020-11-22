@@ -31,8 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMuestraFuncionarios));
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCerrar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.CombClientes = new System.Windows.Forms.ComboBox();
+            this.CombFuncionarios = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtApellido2 = new System.Windows.Forms.TextBox();
@@ -43,8 +42,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            this.btnCerrar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuSeparator1
@@ -71,36 +73,22 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Lista de Funcionarios";
             // 
-            // btnCerrar
+            // CombFuncionarios
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(241)))));
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(874, 12);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(24, 24);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 14;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Zoom = 10;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // CombClientes
-            // 
-            this.CombClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CombClientes.FormattingEnabled = true;
-            this.CombClientes.Location = new System.Drawing.Point(220, 127);
-            this.CombClientes.Name = "CombClientes";
-            this.CombClientes.Size = new System.Drawing.Size(301, 28);
-            this.CombClientes.TabIndex = 18;
+            this.CombFuncionarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CombFuncionarios.FormattingEnabled = true;
+            this.CombFuncionarios.Location = new System.Drawing.Point(146, 127);
+            this.CombFuncionarios.Name = "CombFuncionarios";
+            this.CombFuncionarios.Size = new System.Drawing.Size(301, 28);
+            this.CombFuncionarios.TabIndex = 18;
+            this.CombFuncionarios.SelectedIndexChanged += new System.EventHandler(this.CombClientes_SelectedIndexChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(13, 130);
+            this.label8.Location = new System.Drawing.Point(142, 105);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(201, 19);
             this.label8.TabIndex = 17;
@@ -118,7 +106,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(17, 193);
+            this.groupBox1.Location = new System.Drawing.Point(18, 216);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(880, 159);
             this.groupBox1.TabIndex = 16;
@@ -197,13 +185,40 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Cedula";
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(241)))));
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageActive = null;
+            this.btnCerrar.Location = new System.Drawing.Point(874, 12);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(24, 24);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 14;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Zoom = 10;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::La_Gota.Properties.Resources.man1G;
+            this.pictureBox1.InitialImage = global::La_Gota.Properties.Resources.man__3_;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 82);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(118, 105);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmMuestraFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(910, 510);
-            this.Controls.Add(this.CombClientes);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.CombFuncionarios);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bunifuSeparator1);
@@ -212,9 +227,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMuestraFuncionarios";
             this.Text = "FrmMuestraFuncionarios";
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,7 +241,7 @@
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private Bunifu.Framework.UI.BunifuImageButton btnCerrar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox CombClientes;
+        private System.Windows.Forms.ComboBox CombFuncionarios;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtApellido2;
@@ -236,5 +252,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

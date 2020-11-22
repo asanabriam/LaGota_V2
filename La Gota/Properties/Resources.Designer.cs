@@ -113,6 +113,16 @@ namespace La_Gota.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap house1 {
+            get {
+                object obj = ResourceManager.GetObject("house1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap informacion {
             get {
                 object obj = ResourceManager.GetObject("informacion", resourceCulture);
@@ -146,6 +156,26 @@ namespace La_Gota.Properties {
         internal static System.Drawing.Bitmap man__3_ {
             get {
                 object obj = ResourceManager.GetObject("man (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap man1G {
+            get {
+                object obj = ResourceManager.GetObject("man1G", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap man2G {
+            get {
+                object obj = ResourceManager.GetObject("man2G", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -11,7 +11,12 @@ namespace Biblioteca.Entidades
         public int NIS { set; get; }
         public string MARCA { set; get; }
         public int NUMSERIE { set; get; }
-        public string CODCATEGORIA { set; get; }
-        public string IDENTIFICACION { set; get; }
+        public Categorias CATEGORIA { set; get; }
+        public Clientes CLIENTES { set; get; }
+
+        public override string ToString()
+        {
+            return NIS.ToString();
+        }
     }
 }

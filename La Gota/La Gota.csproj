@@ -138,10 +138,13 @@
     <Content Include="Resources\configuraciones.png" />
     <Content Include="Resources\drop.png" />
     <Content Include="Resources\house.png" />
+    <None Include="Resources\house1.png" />
     <Content Include="Resources\informacion.png" />
     <Content Include="Resources\LOGO.png" />
     <Content Include="Resources\man %283%29.png" />
     <Content Include="Resources\man.png" />
+    <None Include="Resources\man2G.png" />
+    <None Include="Resources\man1G.png" />
     <Content Include="Resources\maximizar.png" />
     <Content Include="Resources\minimizar.png" />
     <Content Include="Resources\minimizar2.png" />

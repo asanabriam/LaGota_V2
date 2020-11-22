@@ -47,8 +47,10 @@
             this.CombClientes = new System.Windows.Forms.ComboBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new Bunifu.Framework.UI.BunifuImageButton();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,7 +101,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(12, 194);
+            this.groupBox1.Location = new System.Drawing.Point(18, 207);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(880, 190);
             this.groupBox1.TabIndex = 5;
@@ -201,7 +203,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(8, 131);
+            this.label8.Location = new System.Drawing.Point(142, 93);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(165, 19);
             this.label8.TabIndex = 6;
@@ -211,7 +213,7 @@
             // 
             this.CombClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CombClientes.FormattingEnabled = true;
-            this.CombClientes.Location = new System.Drawing.Point(179, 128);
+            this.CombClientes.Location = new System.Drawing.Point(146, 115);
             this.CombClientes.Name = "CombClientes";
             this.CombClientes.Size = new System.Drawing.Size(301, 28);
             this.CombClientes.TabIndex = 7;
@@ -238,6 +240,17 @@
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::La_Gota.Properties.Resources.man2G;
+            this.pictureBox1.InitialImage = global::La_Gota.Properties.Resources.man__3_;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 73);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(118, 105);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(241)))));
@@ -261,6 +274,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(910, 510);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.CombClientes);
@@ -277,6 +291,7 @@
             this.Text = "FrmMuestraClientes";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -304,5 +319,6 @@
         private System.Windows.Forms.ComboBox CombClientes;
         private System.Windows.Forms.Splitter splitter1;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
