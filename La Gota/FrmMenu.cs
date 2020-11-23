@@ -29,12 +29,14 @@ namespace La_Gota
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-
+            panel5.Controls.Clear();
+            AbrirFormularios<FrmRegistroCliente>();
         }
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
-
+            panel5.Controls.Clear();
+            AbrirFormularios<FrmRegistroCategoria>();
         }
 
         private void bunifuFlatButton6_Click(object sender, EventArgs e)
@@ -65,27 +67,6 @@ namespace La_Gota
 
         }
 
-        private void AbrirFormularios<FormularioAbrir>() where FormularioAbrir:Form, new()
-        {
-            Form Formularios;
-            Formularios = panel5.Controls.OfType<FormularioAbrir>().FirstOrDefault();
-
-            if (Formularios == null)
-            {
-                Formularios = new FormularioAbrir
-                {
-                    TopLevel = false,
-                    Dock = DockStyle.Fill        
-                };
-
-            panel5.Controls.Add(Formularios);
-            panel5.Tag = Formularios;
-            Formularios.Show();
-            Formularios.BringToFront();
-
-            }
-        }
-
         private void btnMosCategoria_Click(object sender, EventArgs e)
         {
             panel5.Controls.Clear();
@@ -96,6 +77,52 @@ namespace La_Gota
         {
             panel5.Controls.Clear();
             AbrirFormularios<FrmMuestraFuncionarios>();
+        }
+
+        private void btnRegFuncionario_Click(object sender, EventArgs e)
+        {
+            AbrirFormularios<FrmRegistroFuncionarios>();
+        }
+
+        private void btnRegHidrometro_Click(object sender, EventArgs e)
+        {
+             AbrirFormularios<FrmRegistroHidrometros>();
+        }
+       
+        private void AbrirFormularios<FormularioAbrir>() where FormularioAbrir : Form, new()
+        {
+            Form Formularios;
+            Formularios = panel5.Controls.OfType<FormularioAbrir>().FirstOrDefault();
+
+            if (Formularios == null)
+            {
+                Formularios = new FormularioAbrir
+                {
+                    TopLevel = false,
+                    Dock = DockStyle.Fill
+                };
+
+                panel5.Controls.Add(Formularios);
+                panel5.Tag = Formularios;
+                Formularios.Show();
+                Formularios.BringToFront();
+
+            }
+        }
+
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void bunifuImageButton4_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnRegistroConsumo_Click(object sender, EventArgs e)
+        {
+            AbrirFormularios<FrmRegistroConsumo>();
         }
     }
 }

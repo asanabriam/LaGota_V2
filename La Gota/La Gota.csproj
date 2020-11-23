@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -81,6 +84,36 @@
     <Compile Include="FrmMuestraFuncionarios.Designer.cs">
       <DependentUpon>FrmMuestraFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRegistroCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroCategoria.Designer.cs">
+      <DependentUpon>FrmRegistroCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroCliente.Designer.cs">
+      <DependentUpon>FrmRegistroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistroConsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroConsumo.Designer.cs">
+      <DependentUpon>FrmRegistroConsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistroFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroFuncionarios.Designer.cs">
+      <DependentUpon>FrmRegistroFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistroHidrometros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroHidrometros.Designer.cs">
+      <DependentUpon>FrmRegistroHidrometros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmMenu.resx">
@@ -97,6 +130,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMuestraHidrometros.resx">
       <DependentUpon>FrmMuestraHidrometros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroCategoria.resx">
+      <DependentUpon>FrmRegistroCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroCliente.resx">
+      <DependentUpon>FrmRegistroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroConsumo.resx">
+      <DependentUpon>FrmRegistroConsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroFuncionarios.resx">
+      <DependentUpon>FrmRegistroFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroHidrometros.resx">
+      <DependentUpon>FrmRegistroHidrometros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,6 +183,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="favicon.ico" />
+    <None Include="Resources\checklist.png" />
     <Content Include="Resources\configuraciones.png" />
     <Content Include="Resources\drop.png" />
     <Content Include="Resources\house.png" />
