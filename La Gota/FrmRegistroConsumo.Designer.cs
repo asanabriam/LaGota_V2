@@ -30,7 +30,7 @@ namespace La_Gota
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistroConsumo));
-            this.dgvHidrometros = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.cmbMes = new System.Windows.Forms.ComboBox();
@@ -47,23 +47,16 @@ namespace La_Gota
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHidrometros)).BeginInit();
+            this.dgvHidrometros = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHidrometros)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvHidrometros
-            // 
-            this.dgvHidrometros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvHidrometros.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(241)))));
-            this.dgvHidrometros.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvHidrometros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHidrometros.Location = new System.Drawing.Point(7, 30);
-            this.dgvHidrometros.Name = "dgvHidrometros";
-            this.dgvHidrometros.RowHeadersVisible = false;
-            this.dgvHidrometros.Size = new System.Drawing.Size(867, 133);
-            this.dgvHidrometros.TabIndex = 0;
             // 
             // label10
             // 
@@ -106,6 +99,7 @@ namespace La_Gota
             this.cmbNis.Name = "cmbNis";
             this.cmbNis.Size = new System.Drawing.Size(145, 27);
             this.cmbNis.TabIndex = 53;
+            this.cmbNis.SelectedIndexChanged += new System.EventHandler(this.cmbNis_SelectedIndexChanged);
             // 
             // btnRegistrar
             // 
@@ -242,6 +236,70 @@ namespace La_Gota
             this.dateTimePicker1.Size = new System.Drawing.Size(337, 27);
             this.dateTimePicker1.TabIndex = 57;
             // 
+            // dgvHidrometros
+            // 
+            this.dgvHidrometros.AllowUserToAddRows = false;
+            this.dgvHidrometros.AllowUserToDeleteRows = false;
+            this.dgvHidrometros.AllowUserToResizeColumns = false;
+            this.dgvHidrometros.AllowUserToResizeRows = false;
+            this.dgvHidrometros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHidrometros.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(241)))));
+            this.dgvHidrometros.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvHidrometros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHidrometros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHidrometros.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvHidrometros.GridColor = System.Drawing.SystemColors.Highlight;
+            this.dgvHidrometros.Location = new System.Drawing.Point(7, 29);
+            this.dgvHidrometros.Name = "dgvHidrometros";
+            this.dgvHidrometros.ReadOnly = true;
+            this.dgvHidrometros.RowHeadersVisible = false;
+            this.dgvHidrometros.Size = new System.Drawing.Size(611, 129);
+            this.dgvHidrometros.TabIndex = 0;
+            this.dgvHidrometros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHidrometros_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 101.0688F;
+            this.Column1.HeaderText = "Nis";
+            this.Column1.MinimumWidth = 100;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 203.0457F;
+            this.Column2.HeaderText = "Mes";
+            this.Column2.MinimumWidth = 100;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 45.57729F;
+            this.Column3.HeaderText = "Fecha de Lectura";
+            this.Column3.MinimumWidth = 200;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 50.30825F;
+            this.Column4.HeaderText = "Lectura";
+            this.Column4.MinimumWidth = 100;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // FrmRegistroConsumo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,18 +325,16 @@ namespace La_Gota
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRegistroConsumo";
             this.Text = "FrmRegistroConsumo";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHidrometros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHidrometros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvHidrometros;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbMes;
@@ -295,5 +351,10 @@ namespace La_Gota
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dgvHidrometros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

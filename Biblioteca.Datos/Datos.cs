@@ -150,6 +150,87 @@ namespace Biblioteca.Datos
             return resultado;
         }
 
+        public List<Mes> ObtenerMeses()
+        {
+            List<Mes> resultado = new List<Mes>();
+
+            Mes ene = new Mes(1, "Enero");
+            Mes feb = new Mes(2, "Febrero");
+            Mes mar = new Mes(3, "Marzo");
+            Mes abr = new Mes(4, "Abril");
+            Mes may = new Mes(5, "Mayo");
+            Mes jun = new Mes(6, "Junio");
+            Mes jul = new Mes(7, "Julio");
+            Mes ago = new Mes(8, "Agosto");
+            Mes set = new Mes(9, "Setiembre");
+            Mes oct = new Mes(10, "Octubre");
+            Mes nov = new Mes(11, "Noviembre");
+            Mes dic = new Mes(12, "Diciembre");
+
+            resultado.Add(ene);
+            resultado.Add(feb);
+            resultado.Add(mar);
+            resultado.Add(abr);
+            resultado.Add(may);
+            resultado.Add(jun);
+            resultado.Add(jul);
+            resultado.Add(ago);
+            resultado.Add(set);
+            resultado.Add(oct);
+            resultado.Add(nov);
+            resultado.Add(dic);
+
+            return resultado;
+        }
+
+        public string getMes (int mes)
+        {
+            string diaMes = "";
+            List<Mes> resultado = ObtenerMeses();
+
+            foreach (Mes dato in resultado)
+            {
+                if(dato.Id == mes){
+                    diaMes = dato.Descripcion;
+                }
+            }
+            return diaMes;
+        }
+
+        public List<HistorialConsumo> ObtenerLecturas(int Nis)
+        {
+            List<HistorialConsumo> resultado = new List<HistorialConsumo>();
+            string cadena = ConfigurationManager.ConnectionStrings["conexionGota"].ConnectionString;
+            SqlConnection conexionSQL = new SqlConnection(cadena);
+            SqlCommand comandoSQL = new SqlCommand();
+            SqlDataReader lectorSQL;
+
+            string sentenciaSQL = "select NIS, MES, FECHALECTURA, LECTURA from HISTORIALCONSUMO where NIS = @NIS;";
+
+            comandoSQL.CommandType = CommandType.Text;
+            comandoSQL.CommandText = sentenciaSQL;
+            comandoSQL.Connection = conexionSQL;
+            comandoSQL.Parameters.AddWithValue("@NIS", Nis);
+
+            conexionSQL.Open();
+            lectorSQL = comandoSQL.ExecuteReader();
+
+            while (lectorSQL.Read())
+            {
+                HistorialConsumo item = new HistorialConsumo();
+
+                item.NIS = lectorSQL.GetInt32(0);
+                item.MES = lectorSQL.GetInt32(1);
+                item.FECHALECTURA =  lectorSQL.GetDateTime(2).ToString("dd-MM-yyyy");
+                item.LECTURA = lectorSQL.GetInt32(3);
+                resultado.Add(item);
+
+            }
+            conexionSQL.Close();
+            return resultado;
+        }
+
+
         public Boolean RegistrarCategorias(Categorias c)
         {
             Boolean resultado = false;
@@ -251,6 +332,7 @@ namespace Biblioteca.Datos
             conexionSQL.Close();
             return resultado;
         }
+       
         public Boolean RegistrarHidrometro(Hidrometros h)
         {
             Boolean resultado = false;
@@ -286,7 +368,8 @@ namespace Biblioteca.Datos
             return resultado;
         }
 
-    }
+       
+    }   
 }
 
 
