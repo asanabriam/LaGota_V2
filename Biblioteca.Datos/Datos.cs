@@ -368,7 +368,39 @@ namespace Biblioteca.Datos
             return resultado;
         }
 
-       
+        public Boolean RegistrarConsumo(HistorialConsumo h)
+        {
+            Boolean resultado = false;
+
+            string cadena = ConfigurationManager.ConnectionStrings["conexionGota"].ConnectionString;
+            SqlConnection conexionSQL = new SqlConnection(cadena);
+            SqlCommand comandoSQL = new SqlCommand();
+            string sentencia;
+
+            sentencia = "insert Into HISTORIALCONSUMO(NIS, MES, FECHALECTURA, LECTURA) values(@NIS, @MES, @FECHALECTURA, @LECTURA)";
+
+            comandoSQL.CommandType = CommandType.Text;
+            comandoSQL.CommandText = sentencia;
+            comandoSQL.Connection = conexionSQL;
+            comandoSQL.Parameters.AddWithValue("@NIS", h.NIS);
+            comandoSQL.Parameters.AddWithValue("@MES", h.MES);
+            comandoSQL.Parameters.AddWithValue("@FECHALECTURA", h.FECHALECTURA);
+            comandoSQL.Parameters.AddWithValue("@LECTURA", h.LECTURA);
+
+            try
+            {
+                conexionSQL.Open();
+                comandoSQL.ExecuteNonQuery();
+                resultado = true;
+            }
+            catch
+            {
+                conexionSQL.Close();
+            }
+
+            conexionSQL.Close();
+            return resultado;
+        }
     }   
 }
 

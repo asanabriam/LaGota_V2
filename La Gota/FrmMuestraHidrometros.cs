@@ -15,8 +15,6 @@ namespace La_Gota
     public partial class FrmMuestraHidrometros : Form
     {
         readonly Datos D;
-        readonly Clientes Cli;
-        readonly Categorias Cat;
         readonly List<Hidrometros> resultado;
 
         public FrmMuestraHidrometros()

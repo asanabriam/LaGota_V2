@@ -29,8 +29,8 @@ namespace La_Gota
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistroConsumo));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.cmbMes = new System.Windows.Forms.ComboBox();
@@ -39,23 +39,24 @@ namespace La_Gota
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.txtMarca = new System.Windows.Forms.TextBox();
-            this.btnCerrar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dgvHidrometros = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.txtLectura = new System.Windows.Forms.TextBox();
+            this.btnCerrar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHidrometros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -112,6 +113,7 @@ namespace La_Gota
             this.btnRegistrar.TabIndex = 52;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // pictureBox1
             // 
@@ -147,6 +149,70 @@ namespace La_Gota
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registros de Consumo";
             // 
+            // dgvHidrometros
+            // 
+            this.dgvHidrometros.AllowUserToAddRows = false;
+            this.dgvHidrometros.AllowUserToDeleteRows = false;
+            this.dgvHidrometros.AllowUserToResizeColumns = false;
+            this.dgvHidrometros.AllowUserToResizeRows = false;
+            this.dgvHidrometros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHidrometros.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(241)))));
+            this.dgvHidrometros.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvHidrometros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHidrometros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHidrometros.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvHidrometros.GridColor = System.Drawing.SystemColors.Highlight;
+            this.dgvHidrometros.Location = new System.Drawing.Point(7, 29);
+            this.dgvHidrometros.Name = "dgvHidrometros";
+            this.dgvHidrometros.ReadOnly = true;
+            this.dgvHidrometros.RowHeadersVisible = false;
+            this.dgvHidrometros.Size = new System.Drawing.Size(611, 129);
+            this.dgvHidrometros.TabIndex = 0;
+            this.dgvHidrometros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHidrometros_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 101.0688F;
+            this.Column1.HeaderText = "Nis";
+            this.Column1.MinimumWidth = 100;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 203.0457F;
+            this.Column2.HeaderText = "Mes";
+            this.Column2.MinimumWidth = 100;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 45.57729F;
+            this.Column3.HeaderText = "Fecha de Lectura";
+            this.Column3.MinimumWidth = 200;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 50.30825F;
+            this.Column4.HeaderText = "Lectura";
+            this.Column4.MinimumWidth = 100;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -171,13 +237,14 @@ namespace La_Gota
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
-            // txtMarca
+            // txtLectura
             // 
-            this.txtMarca.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(19, 218);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(145, 27);
-            this.txtMarca.TabIndex = 42;
+            this.txtLectura.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLectura.Location = new System.Drawing.Point(19, 218);
+            this.txtLectura.Name = "txtLectura";
+            this.txtLectura.Size = new System.Drawing.Size(145, 27);
+            this.txtLectura.TabIndex = 42;
+            this.txtLectura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLectura_KeyPress);
             // 
             // btnCerrar
             // 
@@ -236,69 +303,16 @@ namespace La_Gota
             this.dateTimePicker1.Size = new System.Drawing.Size(337, 27);
             this.dateTimePicker1.TabIndex = 57;
             // 
-            // dgvHidrometros
+            // label5
             // 
-            this.dgvHidrometros.AllowUserToAddRows = false;
-            this.dgvHidrometros.AllowUserToDeleteRows = false;
-            this.dgvHidrometros.AllowUserToResizeColumns = false;
-            this.dgvHidrometros.AllowUserToResizeRows = false;
-            this.dgvHidrometros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvHidrometros.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(241)))));
-            this.dgvHidrometros.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvHidrometros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHidrometros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHidrometros.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvHidrometros.GridColor = System.Drawing.SystemColors.Highlight;
-            this.dgvHidrometros.Location = new System.Drawing.Point(7, 29);
-            this.dgvHidrometros.Name = "dgvHidrometros";
-            this.dgvHidrometros.ReadOnly = true;
-            this.dgvHidrometros.RowHeadersVisible = false;
-            this.dgvHidrometros.Size = new System.Drawing.Size(611, 129);
-            this.dgvHidrometros.TabIndex = 0;
-            this.dgvHidrometros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHidrometros_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 101.0688F;
-            this.Column1.HeaderText = "Nis";
-            this.Column1.MinimumWidth = 100;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 203.0457F;
-            this.Column2.HeaderText = "Mes";
-            this.Column2.MinimumWidth = 100;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 45.57729F;
-            this.Column3.HeaderText = "Fecha de Lectura";
-            this.Column3.MinimumWidth = 200;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.FillWeight = 50.30825F;
-            this.Column4.HeaderText = "Lectura";
-            this.Column4.MinimumWidth = 100;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(36)))), ((int)(((byte)(111)))));
+            this.label5.Location = new System.Drawing.Point(170, 218);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(18, 18);
+            this.label5.TabIndex = 58;
+            this.label5.Text = "* ";
             // 
             // FrmRegistroConsumo
             // 
@@ -306,6 +320,7 @@ namespace La_Gota
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(910, 510);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -317,7 +332,7 @@ namespace La_Gota
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.bunifuSeparator1);
-            this.Controls.Add(this.txtMarca);
+            this.Controls.Add(this.txtLectura);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -327,8 +342,8 @@ namespace La_Gota
             this.Text = "FrmRegistroConsumo";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHidrometros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,7 +360,7 @@ namespace La_Gota
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox txtLectura;
         private Bunifu.Framework.UI.BunifuImageButton btnCerrar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
@@ -356,5 +371,6 @@ namespace La_Gota
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label label5;
     }
 }

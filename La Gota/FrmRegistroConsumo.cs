@@ -83,5 +83,125 @@ namespace La_Gota
         {
             llenaDgvHidrometros(int.Parse(cmbNis.Text));
         }
+
+        private void txtLectura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloNumeros(sender, e);
+        }
+
+        private bool validar(Form formulario)
+        {
+            bool vacio = false;
+
+            foreach (Control oControls in formulario.Controls) // Buscamos en cada TextBox de nuestro Formulario.
+            {
+                if (oControls is TextBox & oControls.Text == String.Empty) // Verificamos que no este vacio.
+                {
+                    vacio = true; // Si esta vacio el TextBox asignamos el valor True a nuestra variable.
+                }
+            }
+
+            if (vacio == true) MessageBox.Show("Favor de llenar todos los campos.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // Si nuestra variable es verdadera mostramos un mensaje.
+
+
+
+            else if (cmbNis.Text == String.Empty)
+            {
+                MessageBox.Show("Debe elegir un NIS!", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                vacio = true;
+            }
+
+            else if (cmbMes.Text == String.Empty)
+            {
+                MessageBox.Show("Debe elegir un Mes!", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                vacio = true;
+            }
+
+            else
+                vacio = false; // Devolvemos el valor original a nuestra variable.
+
+            return vacio;
+        }
+
+        private void soloNumeros(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Este campo solo admite números", "Solo números", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (validar(this) == false) // Se valida que nos campos no esten vacios
+            {
+                
+                if (lecturaAnterior(int.Parse(cmbNis.Text))<int.Parse(txtLectura.Text))
+                {
+                    Mes m = (Mes)cmbMes.SelectedItem;
+                    if (mesRepetido(int.Parse(cmbNis.Text), m.Id) == false)
+                    {
+                        HistorialConsumo hist = new HistorialConsumo();
+
+                        hist.NIS = int.Parse(cmbNis.Text);
+                        hist.MES = m.Id;
+                        hist.FECHALECTURA = dateTimePicker1.Value.ToString("dd-MM-yyyy");
+                        hist.LECTURA = int.Parse(txtLectura.Text);
+
+
+                        if (D.RegistrarConsumo (hist))
+                        {
+                            MessageBox.Show("La categoria fue registrada exitosamente", "Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            llenaDgvHidrometros(int.Parse(cmbNis.Text));
+                            txtLectura.Text = "";
+                        }
+
+                        else
+                        {
+                            MessageBox.Show("La categoría no se pudo registrar. \nRevise el Código, este no puede repetirse.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El mes de consumo ya ha sido registrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("La nueva lectura es menor que la ultima lectura", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+        }
+
+        public int lecturaAnterior(int NIS)// Devuele la ultima Lectura del numero NIS
+        {
+            int lecAnterior = 0;
+
+            foreach (HistorialConsumo dato in D.ObtenerLecturas(NIS))
+            {
+               if (dato.LECTURA > lecAnterior)
+                {
+                    lecAnterior = dato.LECTURA;
+                }
+            }
+            return lecAnterior;
+        }
+
+        public bool mesRepetido(int NIS, int MES)// Devuele la ultima Lectura del numero NIS
+        {
+            bool repetido = false;
+
+            foreach (HistorialConsumo dato in D.ObtenerLecturas(NIS))
+            {
+                if (dato.MES == MES)
+                {
+                    repetido = true;
+                }
+            }
+            return repetido;
+        }
     }
 }
