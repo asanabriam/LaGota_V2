@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.ClienteServidor
 {
+    // Clase que serializa y desserealiza los paquetes que se van a transmitir
     public class Formato
     {
         public static string Serializar(List<string> lista)

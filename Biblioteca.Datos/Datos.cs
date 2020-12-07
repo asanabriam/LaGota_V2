@@ -142,32 +142,33 @@ namespace Biblioteca.Datos
             comandoSQL.Connection = conexionSQL;
 
             conexionSQL.Open();
-            try { 
-            lectorSQL = comandoSQL.ExecuteReader();
-
-
-
-
-            while (lectorSQL.Read())
+            try
             {
-                Hidrometros item = new Hidrometros();
-                Clientes cli = new Clientes();
-                Categorias cat = new Categorias();
+                lectorSQL = comandoSQL.ExecuteReader();
 
-                item.NIS = lectorSQL.GetInt32(0);
-                item.MARCA = lectorSQL.GetString(1);
-                item.NUMSERIE = lectorSQL.GetInt32(2);
-                cat.CODCATEGORIA = lectorSQL.GetString(5);
-                cat.DESCRIPCION = lectorSQL.GetString(6);
-                cli.IDENTIFICACION = lectorSQL.GetString(7);
-                cli.NOMBRE = lectorSQL.GetString(8);
-                cli.APELLIDO1 = lectorSQL.GetString(9);
-                cli.APELLIDO2 = lectorSQL.GetString(10);
-                item.CLIENTES = cli;
-                item.CATEGORIA = cat;
-                resultado.Add(item);
 
-            }
+
+
+                while (lectorSQL.Read())
+                {
+                    Hidrometros item = new Hidrometros();
+                    Clientes cli = new Clientes();
+                    Categorias cat = new Categorias();
+
+                    item.NIS = lectorSQL.GetInt32(0);
+                    item.MARCA = lectorSQL.GetString(1);
+                    item.NUMSERIE = lectorSQL.GetInt32(2);
+                    cat.CODCATEGORIA = lectorSQL.GetString(5);
+                    cat.DESCRIPCION = lectorSQL.GetString(6);
+                    cli.IDENTIFICACION = lectorSQL.GetString(7);
+                    cli.NOMBRE = lectorSQL.GetString(8);
+                    cli.APELLIDO1 = lectorSQL.GetString(9);
+                    cli.APELLIDO2 = lectorSQL.GetString(10);
+                    item.CLIENTES = cli;
+                    item.CATEGORIA = cat;
+                    resultado.Add(item);
+
+                }
             }
             catch (Exception)
             {
@@ -209,14 +210,15 @@ namespace Biblioteca.Datos
             return resultado;
         }
 
-        public string getMes (int mes)
+        public string getMes(int mes)
         {
             string diaMes = "";
             List<Mes> resultado = ObtenerMeses();
 
             foreach (Mes dato in resultado)
             {
-                if(dato.Id == mes){
+                if (dato.Id == mes)
+                {
                     diaMes = dato.Descripcion;
                 }
             }
@@ -247,7 +249,7 @@ namespace Biblioteca.Datos
 
                 item.NIS = lectorSQL.GetInt32(0);
                 item.MES = lectorSQL.GetInt32(1);
-                item.FECHALECTURA =  lectorSQL.GetDateTime(2).ToString("dd-MM-yyyy");
+                item.FECHALECTURA = lectorSQL.GetDateTime(2).ToString("dd-MM-yyyy");
                 item.LECTURA = lectorSQL.GetInt32(3);
                 resultado.Add(item);
 
@@ -255,7 +257,6 @@ namespace Biblioteca.Datos
             conexionSQL.Close();
             return resultado;
         }
-
 
         public Boolean RegistrarCategorias(Categorias c)
         {
@@ -271,7 +272,7 @@ namespace Biblioteca.Datos
             comandoSQL.CommandType = CommandType.Text;
             comandoSQL.CommandText = sentencia;
             comandoSQL.Connection = conexionSQL;
-            comandoSQL.Parameters.AddWithValue("@CODCATEGORIA",c.CODCATEGORIA);
+            comandoSQL.Parameters.AddWithValue("@CODCATEGORIA", c.CODCATEGORIA);
             comandoSQL.Parameters.AddWithValue("@DESCRIPCION", c.DESCRIPCION);
 
             try
@@ -280,9 +281,9 @@ namespace Biblioteca.Datos
                 comandoSQL.ExecuteNonQuery();
                 resultado = true;
             }
-            catch 
+            catch
             {
-                conexionSQL.Close();   
+                conexionSQL.Close();
             }
 
             conexionSQL.Close();
@@ -358,7 +359,7 @@ namespace Biblioteca.Datos
             conexionSQL.Close();
             return resultado;
         }
-       
+
         public Boolean RegistrarHidrometro(Hidrometros h)
         {
             Boolean resultado = false;
@@ -427,11 +428,6 @@ namespace Biblioteca.Datos
             conexionSQL.Close();
             return resultado;
         }
-    }   
+    }
 }
-
-
-
-
-
 

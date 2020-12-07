@@ -50,6 +50,13 @@ namespace La_Gota_Servidor
             _tcpListener.Stop();
             _acceptThread.Abort();
             connectedClients.Clear();
+
+
+            foreach (ConexionTcp lista in connectedClients)
+            {
+                lista.ReadThread.Abort();
+            }
+
             label1.Text = "0";
 
             btnStart.Enabled = true;
@@ -263,12 +270,21 @@ namespace La_Gota_Servidor
             StartServer();
             btnStart.Enabled = false;
             btnStop.Enabled = true;
-
+            bunifuImageButton1.Image = La_Gota_Servidor.Properties.Resources.ENCENDIDO;
         }
 
         private void btnStop_Click(object sender, EventArgs e)
         {
             StopServer();
+            bunifuImageButton1.Image = La_Gota_Servidor.Properties.Resources.APAGADO;
+
+
+
+        }
+
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -112,6 +112,5 @@ namespace La_Gota_Cliente
         {
             TcpClient.Close();
         }
-
     }
 }

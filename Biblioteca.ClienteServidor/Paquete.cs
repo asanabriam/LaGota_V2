@@ -22,7 +22,7 @@ namespace Biblioteca.ClienteServidor
             Contenido = contenido;
         }
 
-        public Paquete(string datos) // ej: login:usuario,contrasena
+        public Paquete(string datos)
         {
             int sepIndex = datos.IndexOf(":", StringComparison.Ordinal);
             Comando = datos.Substring(0, sepIndex);

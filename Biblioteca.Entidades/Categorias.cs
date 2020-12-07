@@ -11,18 +11,18 @@ namespace Biblioteca.Entidades
         public string CODCATEGORIA { set; get; }
         public string DESCRIPCION { set; get; }
 
-  
         public override string ToString()
         {
             return DESCRIPCION;
         }
 
-        public int MONTO {
+        public int MONTO
+        {
 
             get
             {
                 if (CODCATEGORIA == "1")
-                    return  1000;
+                    return 1000;
 
                 if (CODCATEGORIA == "2")
                     return 2000;
@@ -37,7 +37,8 @@ namespace Biblioteca.Entidades
                     return 0;
 
             }
-        
+
         }
     }
 }
+

@@ -158,5 +158,9 @@ namespace La_Gota_Cliente
 
             }
         }
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

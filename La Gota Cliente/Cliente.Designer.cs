@@ -37,6 +37,7 @@ namespace La_Gota_Cliente
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lblResultado = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.cmbMes = new System.Windows.Forms.ComboBox();
@@ -50,23 +51,22 @@ namespace La_Gota_Cliente
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnCerrar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnMosCategoria = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDesconectar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.btnConectar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.lblResultado = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,6 +129,17 @@ namespace La_Gota_Cliente
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(554, 316);
             this.panel5.TabIndex = 3;
+            // 
+            // lblResultado
+            // 
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.Font = new System.Drawing.Font("Square721 BT", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(36)))), ((int)(((byte)(111)))));
+            this.lblResultado.Location = new System.Drawing.Point(191, 215);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(141, 45);
+            this.lblResultado.TabIndex = 29;
+            this.lblResultado.Text = "Monto";
             // 
             // bunifuCustomLabel6
             // 
@@ -277,35 +288,6 @@ namespace La_Gota_Cliente
             this.bunifuCustomLabel1.TabIndex = 4;
             this.bunifuCustomLabel1.Text = "S.A.R.F - Cliente v1.0  ";
             // 
-            // bunifuImageButton5
-            // 
-            this.bunifuImageButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(118)))), ((int)(((byte)(190)))));
-            this.bunifuImageButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
-            this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(512, 29);
-            this.bunifuImageButton5.Name = "bunifuImageButton5";
-            this.bunifuImageButton5.Size = new System.Drawing.Size(24, 24);
-            this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton5.TabIndex = 3;
-            this.bunifuImageButton5.TabStop = false;
-            this.bunifuImageButton5.Zoom = 10;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(118)))), ((int)(((byte)(190)))));
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnCerrar.Image = global::La_Gota_Cliente.Properties.Resources.cerrar;
-            this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(542, 29);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(24, 24);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Zoom = 10;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // panel2
             // 
             this.panel2.AllowDrop = true;
@@ -321,6 +303,55 @@ namespace La_Gota_Cliente
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(270, 517);
             this.panel2.TabIndex = 0;
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(0, 236);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(267, 25);
+            this.bunifuSeparator1.TabIndex = 4;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panel3;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // bunifuImageButton5
+            // 
+            this.bunifuImageButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(118)))), ((int)(((byte)(190)))));
+            this.bunifuImageButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.bunifuImageButton5.Image = global::La_Gota_Cliente.Properties.Resources.minimizar2;
+            this.bunifuImageButton5.ImageActive = null;
+            this.bunifuImageButton5.Location = new System.Drawing.Point(512, 29);
+            this.bunifuImageButton5.Name = "bunifuImageButton5";
+            this.bunifuImageButton5.Size = new System.Drawing.Size(24, 24);
+            this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton5.TabIndex = 3;
+            this.bunifuImageButton5.TabStop = false;
+            this.bunifuImageButton5.Zoom = 10;
+            this.bunifuImageButton5.Click += new System.EventHandler(this.bunifuImageButton5_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(118)))), ((int)(((byte)(190)))));
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCerrar.Image = global::La_Gota_Cliente.Properties.Resources.cerrar;
+            this.btnCerrar.ImageActive = null;
+            this.btnCerrar.Location = new System.Drawing.Point(542, 29);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(24, 24);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Zoom = 10;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnMosCategoria
             // 
@@ -393,18 +424,6 @@ namespace La_Gota_Cliente
             this.btnDesconectar.TextFont = new System.Drawing.Font("Square721 BT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
             // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(0, 236);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(267, 25);
-            this.bunifuSeparator1.TabIndex = 4;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = false;
-            // 
             // btnConectar
             // 
             this.btnConectar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
@@ -454,24 +473,6 @@ namespace La_Gota_Cliente
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 10;
             // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.panel3;
-            this.bunifuDragControl1.Vertical = true;
-            // 
-            // lblResultado
-            // 
-            this.lblResultado.AutoSize = true;
-            this.lblResultado.Font = new System.Drawing.Font("Square721 BT", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(36)))), ((int)(((byte)(111)))));
-            this.lblResultado.Location = new System.Drawing.Point(191, 215);
-            this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(141, 45);
-            this.lblResultado.TabIndex = 29;
-            this.lblResultado.Text = "Monto";
-            // 
             // Cliente
             // 
             this.AllowDrop = true;
@@ -483,6 +484,7 @@ namespace La_Gota_Cliente
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente";
@@ -494,9 +496,9 @@ namespace La_Gota_Cliente
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

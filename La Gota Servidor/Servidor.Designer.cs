@@ -34,6 +34,10 @@ namespace La_Gota_Servidor
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtLog = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -41,10 +45,6 @@ namespace La_Gota_Servidor
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.txtLog = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnCerrar = new Bunifu.Framework.UI.BunifuImageButton();
@@ -99,6 +99,49 @@ namespace La_Gota_Servidor
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(563, 374);
             this.panel5.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(36)))), ((int)(((byte)(111)))));
+            this.label4.Location = new System.Drawing.Point(423, 133);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(140, 35);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "En Linea";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(36)))), ((int)(((byte)(111)))));
+            this.label3.Location = new System.Drawing.Point(423, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(132, 35);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Clientes";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(4, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 25);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Bitacora";
+            // 
+            // txtLog
+            // 
+            this.txtLog.BackColor = System.Drawing.Color.Black;
+            this.txtLog.ForeColor = System.Drawing.Color.Green;
+            this.txtLog.Location = new System.Drawing.Point(9, 32);
+            this.txtLog.Multiline = true;
+            this.txtLog.Name = "txtLog";
+            this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtLog.Size = new System.Drawing.Size(408, 329);
+            this.txtLog.TabIndex = 5;
             // 
             // panel4
             // 
@@ -173,49 +216,6 @@ namespace La_Gota_Servidor
             this.bunifuDragControl1.TargetControl = this.panel3;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // txtLog
-            // 
-            this.txtLog.BackColor = System.Drawing.Color.Black;
-            this.txtLog.ForeColor = System.Drawing.Color.Green;
-            this.txtLog.Location = new System.Drawing.Point(9, 32);
-            this.txtLog.Multiline = true;
-            this.txtLog.Name = "txtLog";
-            this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtLog.Size = new System.Drawing.Size(408, 329);
-            this.txtLog.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 25);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Bitacora";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(36)))), ((int)(((byte)(111)))));
-            this.label3.Location = new System.Drawing.Point(423, 98);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 35);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Clientes";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(36)))), ((int)(((byte)(111)))));
-            this.label4.Location = new System.Drawing.Point(423, 133);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 35);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "En Linea";
-            // 
             // bunifuImageButton1
             // 
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
@@ -242,6 +242,7 @@ namespace La_Gota_Servidor
             this.bunifuImageButton5.TabIndex = 3;
             this.bunifuImageButton5.TabStop = false;
             this.bunifuImageButton5.Zoom = 10;
+            this.bunifuImageButton5.Click += new System.EventHandler(this.bunifuImageButton5_Click);
             // 
             // btnCerrar
             // 
@@ -389,6 +390,7 @@ namespace La_Gota_Servidor
             this.ClientSize = new System.Drawing.Size(848, 508);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Servidor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Servidor";
