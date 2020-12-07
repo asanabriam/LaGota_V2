@@ -136,7 +136,7 @@ namespace La_Gota
 
                 else
                 {
-                    MessageBox.Show("La categoría no se pudo registrar. \nRevise el Código, este no puede repetirse.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("La Hidrometro no se pudo registrar. \nRevise el Código, este no puede repetirse.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

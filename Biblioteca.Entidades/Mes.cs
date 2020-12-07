@@ -8,6 +8,7 @@ namespace Biblioteca.Entidades
 {
     public class Mes
     {
+        
         public int Id { set; get; }
         public string Descripcion { set; get; }
 

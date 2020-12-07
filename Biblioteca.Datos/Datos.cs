@@ -27,21 +27,39 @@ namespace Biblioteca.Datos
             comandoSQL.CommandText = sentenciaSQL;
             comandoSQL.Connection = conexionSQL;
 
-            conexionSQL.Open();
-            lectorSQL = comandoSQL.ExecuteReader();
 
-            while (lectorSQL.Read())
+            try
             {
-                Clientes item = new Clientes();
-                item.IDENTIFICACION = lectorSQL.GetString(0);
-                item.NOMBRE = lectorSQL.GetString(1);
-                item.APELLIDO1 = lectorSQL.GetString(2);
-                item.APELLIDO2 = lectorSQL.GetString(3);
-                item.CORREOELECTRONICO = lectorSQL.GetString(4);
-                item.NUMCELULAR = lectorSQL.GetString(5);
-                resultado.Add(item);
+                conexionSQL.Open();
+                lectorSQL = comandoSQL.ExecuteReader();
 
+                while (lectorSQL.Read())
+                {
+                    Clientes item = new Clientes();
+                    item.IDENTIFICACION = lectorSQL.GetString(0);
+                    item.NOMBRE = lectorSQL.GetString(1);
+                    item.APELLIDO1 = lectorSQL.GetString(2);
+                    item.APELLIDO2 = lectorSQL.GetString(3);
+                    item.CORREOELECTRONICO = lectorSQL.GetString(4);
+                    item.NUMCELULAR = lectorSQL.GetString(5);
+                    resultado.Add(item);
+                }
             }
+
+            catch (SqlException ex)
+            {
+                StringBuilder errorMessages = new StringBuilder();
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    errorMessages.Append("Index #" + i + "\n" +
+                        "Message: " + ex.Errors[i].Message + "\n" +
+                        "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
+                        "Source: " + ex.Errors[i].Source + "\n" +
+                        "Procedure: " + ex.Errors[i].Procedure + "\n");
+                }
+                Console.WriteLine(errorMessages.ToString());
+            }
+
             conexionSQL.Close();
             return resultado;
         }
@@ -124,7 +142,11 @@ namespace Biblioteca.Datos
             comandoSQL.Connection = conexionSQL;
 
             conexionSQL.Open();
+            try { 
             lectorSQL = comandoSQL.ExecuteReader();
+
+
+
 
             while (lectorSQL.Read())
             {
@@ -145,6 +167,10 @@ namespace Biblioteca.Datos
                 item.CATEGORIA = cat;
                 resultado.Add(item);
 
+            }
+            }
+            catch (Exception)
+            {
             }
             conexionSQL.Close();
             return resultado;
